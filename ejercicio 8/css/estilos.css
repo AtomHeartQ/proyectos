@@ -1,0 +1,104 @@
+/* Mis estilos CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 25px;
+    font-family:Verdana, sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+header{
+    background-color: teal;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+nav{
+    background-color: aquamarine;
+    padding: 16px 0;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 0 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.lista_enlaces li{
+    list-style-type: hiragana;
+}
+a:hover{
+    background-color: teal;
+    color:white;
+}
+
+main, 
+aside{
+    padding: 20px;
+}
+
+main{
+    width:60%;
+    text-align: center;
+}
+
+aside{
+    width: 35%;
+}
+.contenedor{
+    display:flex;
+    padding: 10px 0;
+}
+
+img{
+    max-width: 100%;
+}
+.galeria img{
+    height: 200px;
+}
+p{
+    padding: 10px;
+    text-align: justify;
+}
+
+h1, h2{
+    padding: 10px 0;
+}
+
+footer{
+    background-color: teal;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+#dolorem{
+    color: red;
+    font-size: 30px;
+}
+
+.rojo{
+    color:red;
+}
+.verde{
+    color:green;
+}
+

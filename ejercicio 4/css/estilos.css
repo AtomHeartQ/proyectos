@@ -1,0 +1,28 @@
+/* Mis estilos CSS */
+
+body {
+    background-color: lightgrey;
+  }
+  section {
+    text-align: center;
+  }
+  h1 {
+    color: blue;
+  }
+  img {
+    max-width: 100%;
+  }
+  p {
+    color: blue;
+  }
+  
+  #mi_parrafo{
+    font-size: 25px;
+    color:blueviolet;
+    font-weight: bold;
+  }
+
+  .parrafo_especial{
+    font-size: 20px;
+    border: 1px dashed blue;
+  }
