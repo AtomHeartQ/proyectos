@@ -1,0 +1,70 @@
+/* Mis estilos CSS */
+#tercero{
+    color:green;
+}
+
+p{
+    color:blue;
+}
+
+.red_text{
+    color:red;
+}
+
+ul > a{
+    color: maroon;
+}
+
+ul > li.active + li a{
+    text-decoration: none;
+}
+
+ul > li.active ~ li{
+    background-color: orange;
+}
+
+/* pseudo-class */
+ul > li:first-child{
+    background-color: yellow;
+}
+
+/*pseudo-element*/
+main > p:first-child::first-letter{
+    font-size: 30px;
+}
+/*seleccionar conforme al atributo*/
+/*Elementos que tengan el atributo*/
+[data]{
+    background-color: blue;
+}
+
+/*Elementos que tengan el atributo y su valor sea el indicado*/
+[data='tres']{
+    background-color: blue;
+}
+
+/*Elementos en los que el valor del atributo comience por estos caracteres*/
+input[id^='letter']{
+    border: 1px solid red;
+}
+
+
+/*Elementos en los que el valor del atributo termine por estos caracteres*/
+input[id$='2']{
+    border: 1px solid blue;
+}
+
+/*Elementos en los que el valor del atributo contenga los caracteres*/
+input[id*='letter']{
+    border: 1px solid red;
+}
+
+/*Elementos en los que el valor del atributo empiece con esta palabra*/
+input[class~='field1']{
+    border: 1px solid blue;
+}
+
+/*Elementos en los que el valor del atributo termine con esta palabra*/
+input[class|='field1']{
+    border: 1px solid blue;
+}
