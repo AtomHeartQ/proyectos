@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Aplicación</title>
     <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/galeria.js" defer></script>
   </head>
   <body>
     <header><a href="/">☠️</a> Mi Aplicación Web</header>
@@ -79,6 +80,7 @@
             <section>
               <h3>Fotos</h3>
               <div class="contenedor galeria">
+                <!--
                 <figure>
                   <img src="assets/img/bones1.jpg" />
                   <figcaption>Imagen 1</figcaption>
@@ -87,10 +89,17 @@
                   <img src="assets/img/bones2.jpg" />
                   <figcaption>Imagen 2</figcaption>
                 </figure>
+                -->
                 <figure>
-                  <img src="assets/img/bones3.webp" />
-                  <figcaption>Imagen 3</figcaption>
+                  <img id="galeria_foto" />
+                  <figcaption id="galeria_texto"></figcaption>
                 </figure>
+              </div>
+              <div class="botones">
+                <button id="foto-anterior" onclick="anterior()">
+                  ANTERIOR
+                </button>
+                <button id="foto-proxima" onclick="proxima()">PRÓXIMA</button>
               </div>
             </section>
             <section>

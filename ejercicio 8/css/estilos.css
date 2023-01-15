@@ -53,16 +53,18 @@ a:hover{
 main, 
 aside{
     padding: 20px;
+    text-align: center;
+    margin: 5px;
 }
 
 main{
     width:60%;
-    text-align: center;
 }
 
 aside{
     width: 35%;
 }
+
 .contenedor{
     display:flex;
     padding: 10px 0;
@@ -71,9 +73,10 @@ aside{
 img{
     max-width: 100%;
 }
+/*
 .galeria img{
     height: 200px;
-}
+}*/
 p{
     padding: 10px;
     text-align: justify;
@@ -102,3 +105,50 @@ footer{
     color:green;
 }
 
+button{
+    background-color: teal;
+    color: white;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: aquamarine;
+    color: black;
+}
+
+.botones{
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+@media screen and (max-width: 600px){
+    main, 
+    aside{
+        width: 100%;
+    }
+
+    .contenedor,
+    ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li{
+        width: 100%;
+    }
+
+    .botones button{
+        font-size: 0px; /* Truco para borrar el texto */
+    }
+
+    .botones #foto-anterior::after{
+        font-size: 20px;
+        content: "<-";
+    }
+
+    .botones #foto-proxima::after{
+        font-size: 20px;
+        content: "->"; /* cambia el texto por unas flechitas majas
+         (en realidad añade este contenido a lo anterior) */
+    }
+}
