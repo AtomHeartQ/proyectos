@@ -48,3 +48,38 @@ header.main_header{
     background: linear-gradient(0deg, var(--blue) 0%, var(--gold) 100%); 
     
 }
+
+.section_caption{
+    display: flex;
+    padding: 100px;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 90%;
+    overflow: hidden;
+}
+
+section button{
+    color: black;
+    background: #fdbb2d;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.h1{
+    color: white;
+}
+
+.imagen_principal{
+    background: white;
+    width: 50%;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+.contenedor_caption{
+    
+    width: 50%;
+}
