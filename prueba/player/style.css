@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**main{
+    position: relative;
+    width: 90%;
+}
+main img{
+    max-width: 30%;
+}*/
+
+div.video{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+div.preview{
+    width: 150px;
+    height: 100px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin: 10px 20px;
+}
+
+div.preview h5{
+    text-align: center;
+    color: white;
+}
+div.preview:first-child{
+    background-image: url('img/paisaje1.webp');
+}
+
+div.preview:nth-child(2){
+    background-image: url(img/paisaje2.webp);
+}
+
+div.preview:first-child + div + div{
+    background-image: url(img/paisaje3.webp);
+}
+
+div.preview:first-child + div + div + div{
+    background-image: url(img/paisaje4.webp);
+}
+
+div.preview:nth-child(5) {
+    background-image: url(img/paisaje5.jpg);
+}
+
+div.preview:last-child{
+    background-image: url(img/paisaje6.jpg);
+}
+
+/*
+.play{
+    position: absolute;
+    display: flex;
+    top: 0px;
+    bottom: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(55,55,55,0.5);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.play img{
+    line-height: 100%;
+    max-width: 10%;
+}
+*/
