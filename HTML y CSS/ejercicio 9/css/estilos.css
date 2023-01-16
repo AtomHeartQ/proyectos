@@ -1,1 +1,58 @@
 /* Mis estilos CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+section{
+    width: 80%;
+    margin: 0 auto;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    overflow-x: scroll;
+}
+
+table, 
+th, 
+td{
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: teal;
+    color: white;
+}
+
+th, 
+td{
+    padding: 10px;
+}
+
+@media screen and (max-width:600px) and (orientation:portrait){
+    section{
+        width: 100%;
+    }
+    table{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:800px) and (orientation:landscape){
+    section{
+        width: 100%;
+    }
+    table{
+        font-size: 20px;
+    }
+}
