@@ -80,22 +80,47 @@
             <section>
               <h3>Fotos</h3>
               <div class="contenedor galeria">
+                <figure>
+                  <img
+                    id="foto0"
+                    onmouseover="desactivarMovimiento()"
+                    onmouseout="activarMovimiento()"
+                  />
+                  <figcaption id="texto0"></figcaption>
+                </figure>
+                <figure>
+                  <img
+                    id="foto1"
+                    onmouseover="desactivarMovimiento()"
+                    onmouseout="activarMovimiento()"
+                  />
+                  <figcaption id="texto1"></figcaption>
+                </figure>
+                <figure>
+                  <img
+                    id="foto2"
+                    onmouseover="desactivarMovimiento()"
+                    onmouseout="activarMovimiento()"
+                  />
+                  <figcaption id="texto2"></figcaption>
+                </figure>
                 <!--
-                <figure>
-                  <img src="assets/img/bones1.jpg" />
-                  <figcaption>Imagen 1</figcaption>
-                </figure>
-                <figure>
-                  <img src="assets/img/bones2.jpg" />
-                  <figcaption>Imagen 2</figcaption>
-                </figure>
-                -->
                 <figure>
                   <img id="galeria_foto" />
                   <figcaption id="galeria_texto"></figcaption>
                 </figure>
+                -->
               </div>
               <div class="botones">
+                <div id="bloque_mover">
+                  <label for="mover">Movimiento</label>
+                  <input
+                    id="mover"
+                    type="checkbox"
+                    checked="checked"
+                    onchange="activarDesactivar()"
+                  />
+                </div>
                 <button id="foto-anterior" onclick="anterior()">
                   ANTERIOR
                 </button>

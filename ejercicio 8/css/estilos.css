@@ -68,6 +68,7 @@ aside{
 .contenedor{
     display:flex;
     padding: 10px 0;
+    justify-content: center;
 }
 
 img{
@@ -122,6 +123,12 @@ button:hover{
     margin: 20px;
 }
 
+#bloque_mover{
+    margin: 25px 0;
+    display: none;
+
+}
+
 @media screen and (max-width: 600px){
     main, 
     aside{
@@ -150,5 +157,13 @@ button:hover{
         font-size: 20px;
         content: "->"; /* cambia el texto por unas flechitas majas
          (en realidad añade este contenido a lo anterior) */
+    }
+
+    #foto1, #foto2, #texto1, #texto2{
+        display: none;
+    }
+
+    #bloque_mover{
+        display: block;
     }
 }
