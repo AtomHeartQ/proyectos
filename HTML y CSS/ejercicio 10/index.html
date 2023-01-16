@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <section>
+      <div><h1>LOGIN</h1></div>
+      <form autocomplete="off" action="https://httpbin.org/post" method="POST">
+        <!--NUNCA JAMÄS DE LOS JAMASES USAR GET COMO MÉTODO EN CUALQUIER COSA QUE IMPLIQUE PRIVACIDAD
+        autocomplete también es bastante peligroso en partes públicas, aunque muy útil en partes privadas-->
+        <div>
+          <label for="usuario">Usuario:</label>
+          <input
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Nombre de usuario"
+          />
+        </div>
+        <div>
+          <label for="correo">Correo Electrónico:</label>
+          <input
+            type="email"
+            name="correo"
+            id="correo"
+            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+            placeholder="Correo del usuario"
+          /><!--expresión regular para validar emails-->
+        </div>
+        <div>
+          <label for="contra">Contraseña:</label>
+          <input
+            type="password"
+            name="contra"
+            id="contra"
+            pattern="[A-Za-z0-9]{8}"
+          />
+        </div>
+        <div>
+          <label for="contra">Repetir contraseña:</label>
+          <input
+            type="password"
+            name="contra2"
+            id="contra"
+            pattern="[A-Za-z0-9]{8}"
+          />
+          <p class="ayuda">8 caracteres en mayúsculas/minúsculas o dígitos</p>
+        </div>
+        <div>
+          <label for="cumple">Fecha de Nacimiento:</label
+          ><input type="date" name="cumple" id="cumple" />
+        </div>
+        <div>
+          <button>Registrarse</button>
+          <!--<input type="submit" value="ENVIAR" /> Formulario tradicional-->
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
