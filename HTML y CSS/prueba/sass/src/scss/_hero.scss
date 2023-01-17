@@ -1,0 +1,36 @@
+#hero{
+    ul{
+        //@include flexColumn (red);
+
+        //@extend %mis-estilos;
+
+        @include tablet{
+            background-color: aqua;
+        }
+
+        li{
+            &.first{
+                a {
+                    color: $primary-color;
+    
+                    &:visited{
+                        color: $secondary-color;
+                    }
+    
+                    &:active{
+    
+                    }
+    
+                    &:hover{
+    
+                    }
+                }
+            }
+    
+            a{
+                color: $secondary-color;
+            }
+        }
+    }
+    
+}

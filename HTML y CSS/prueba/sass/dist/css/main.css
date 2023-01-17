@@ -1,0 +1,22 @@
+@media (min-width: 500px) {
+  #hero ul {
+    background-color: aqua;
+  }
+}
+#hero ul li.first a {
+  color: #FF00AA;
+}
+#hero ul li.first a:visited {
+  color: #005567;
+}
+#hero ul li a {
+  color: #005567;
+}
+
+header {
+  width: 1700%;
+}
+
+p::first-line {
+  color: aqua;
+}/*# sourceMappingURL=main.css.map */

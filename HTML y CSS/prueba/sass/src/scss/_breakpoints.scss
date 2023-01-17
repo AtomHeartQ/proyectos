@@ -1,0 +1,22 @@
+@mixin tablet{
+    @media (min-width: $tablet-brk){
+
+        @content;
+    }
+}
+
+@mixin tablet-lg{
+    @media (min-width: $tablet-lg-brk){
+
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: $desktop-brk){
+
+        @content;
+    }
+}
+
+

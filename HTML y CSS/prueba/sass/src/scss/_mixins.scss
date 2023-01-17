@@ -1,0 +1,11 @@
+@mixin flexColumn ($direction) {
+    display: flex;
+    @if $direction == 'col'{
+        flex-direction: column;
+    }
+}
+
+%mis-estilos{
+    display: flex;
+    flex-direction: column;
+}
