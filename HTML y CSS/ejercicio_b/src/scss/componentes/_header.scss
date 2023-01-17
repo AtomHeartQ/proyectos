@@ -1,0 +1,43 @@
+header.main_header{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(0deg, $color-blue 0%, $color-gold 100%); 
+
+    .secondary-header{
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255 0.1);
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+        align-items: center;
+
+        .logo{
+            object-fit: cover;
+            height: 50px;
+        }
+
+        .menu{
+            color: white;
+            ul{
+                list-style-type: none;
+                overflow: hidden;
+                display: flex;
+                li{
+                    padding: 7px;
+                    height: 100%;
+                    &:hover{
+                        color: black;
+                        background-color: $color-blue;
+                    }
+                    a {
+                        color: inherit;
+                        text-align: center;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
