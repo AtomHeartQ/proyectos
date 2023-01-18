@@ -1,43 +1,98 @@
-header.main_header{
+.main_header {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(0deg, $color-blue 0%, $color-gold 100%);
+
+  .secondary-header {
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(0deg, $color-blue 0%, $color-gold 100%); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
 
-    .secondary-header{
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255 0.1);
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        box-sizing: border-box;
-        align-items: center;
-
-        .logo{
-            object-fit: cover;
-            height: 50px;
-        }
-
-        .menu{
-            color: white;
-            ul{
-                list-style-type: none;
-                overflow: hidden;
-                display: flex;
-                li{
-                    padding: 7px;
-                    height: 100%;
-                    &:hover{
-                        color: black;
-                        background-color: $color-blue;
-                    }
-                    a {
-                        color: inherit;
-                        text-align: center;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
+    .logo {
+      object-fit: cover;
+      height: 50px;
     }
+
+    .menu {
+      color: white;
+      ul {
+        list-style-type: none;
+        overflow: hidden;
+        display: flex;
+        li {
+          padding: 7px;
+          height: 100%;
+          &:hover {
+            color: black;
+            background-color: $color-blue;
+          }
+          a {
+            color: inherit;
+            text-align: center;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    @extend %container;
+
+    &.hero_main {
+      height: calc(100vh - 70px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+
+      .hero_textos {
+        width: 48%;
+
+        .title {
+          font-size: 56px;
+          font-weight: 300;
+          color: #fff;
+
+          .title-active {
+            color: $color-gold;
+            font-weight: 700;
+          }
+        }
+
+        .copy {
+          font-size: 24px;
+          color: $color-gray;
+          text-shadow: $shadow $color_shadow;
+          margin: 15px 0;
+        }
+
+        .cta {
+          padding: 20px 30px;
+          display: inline-block;
+          background: linear-gradient(180deg, #f7ce90, #f48d76 100%);
+          text-decoration: none;
+          color: $color-black2;
+          font-weight: 700;
+          box-shadow: $shadow $color_shadow;
+          border-radius: 6px;
+        }
+      }
+
+      .mockup {
+        object-fit: cover;
+        width: 48%;
+        max-height: 90vh;
+      }
+
+      img {
+        @include float;
+      }
+    }
+  }
 }
