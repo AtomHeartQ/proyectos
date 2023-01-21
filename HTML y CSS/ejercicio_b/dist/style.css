@@ -1,0 +1,91 @@
+:root{
+    --blue: #22c1c3;
+    --gold: #fdbb2d;
+    --gray: #ffffff80;
+    --gray2: #f7d9d990;
+    --black1: #1A1B1F;
+    --black2: #303538;
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+nav.menu{
+    color: white;
+    height: 70px;
+    border-bottom: 1px solid lightblue;
+}
+
+nav.menu ul{
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.menu ul li{
+    padding: 10px;
+    height: 100%;
+}
+
+nav.menu ul li:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
+nav.menu li a {
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+}
+
+header.main_header{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(0deg, var(--blue) 0%, var(--gold) 100%); 
+    
+}
+
+.section_caption{
+    display: flex;
+    padding: 100px;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 90%;
+    overflow: hidden;
+}
+
+section button{
+    color: black;
+    background: #fdbb2d;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.h1{
+    color: white;
+}
+
+.imagen_principal{
+    background: white;
+    width: 50%;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+.contenedor_caption{
+    
+    width: 50%;
+}
