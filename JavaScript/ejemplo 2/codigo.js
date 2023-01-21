@@ -74,3 +74,20 @@ for (let i = 0; i < bingueros.length; i++) {
     
 }
 
+//Un bucle y una condición para imprimir por consola los usuarios menores de edad y los mayores clasificados
+const users = [{name: "Abel", years: 43}, {name: "Maria", years: 18}, {name: "Pedro", years: 14}, {name: "Samantha", years: 32}, {name: "Raquel", years: 16} ]
+
+const mayores =[];
+const menores =[];
+
+for (let i =0; i < users.length;i++){
+    if (users[i].years < 18){
+        console.log("El usuario "+ users[i].name + " es menor de edad" );
+        menores.push(users[i].name);
+    } else{
+        console.log("El usuario "+ users[i].name + " es mayor de edad" )
+        mayores.push(users[i].name);
+    }
+}
+console.log("Usuarios mayores de edad: "+ mayores);
+console.log("Usuarios menores de edad: " + menores);
