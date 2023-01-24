@@ -32,7 +32,7 @@ const products =['Camiseta básica', 'Pantalón vaquero', 'Gorra de béisbol', '
 for (let i = 0; i < products.length; i++) {
     const element= products[i];
 
-    if (elements.toLowerCase().includes('Camiseta'.toLowerCase())){
+    if (element.toLowerCase().includes('Camiseta'.toLowerCase())){
         console.log(element);
     }
     
@@ -82,5 +82,78 @@ for (let index = 0; index < alumns.length; index++) {
     approved = element.T3 == true ? approved++ : approved;
     element.isApproved = approved >= 2 ? true : false;
 
-    
+}
+
+//---- FOR EACH ------
+const myArray = ['Alberto', 'Mario', 'Jose', 'Juan'];
+
+const myFunction = function (element){
+    console.log(element);
+}
+
+myArray.forEach(myFunction);
+
+//o, de forma más elegante, con menos código:
+
+myArray.forEach(function (element){
+    console.log(element);
+})
+
+// FOROF
+for (element of myArray){
+    console.log(element);
+}
+// FOR IN
+//Definimos un objeto con una serie de valores y lo recorremos
+
+var spiderman = {
+    nombre: "Peter",
+    apellidos: "Parker",
+    país: "USA",
+    profesion:"Student"
+}
+
+for (var key in spiderman){
+    console.log("Spiderman tiene "+key+" con valor: "+spiderman[key]);
+}
+
+const placesToTravel =['Japón', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar'];
+for (const element of placesToTravel) {
+    console.log("Viaje a: "+element);
+}
+
+const alien ={
+    name: 'Wormcuck',
+    race: 'cucusumusu',
+    planet: 'Eden',
+    weight: '259kg'
+}
+
+for (const key in alien){
+    console.log('Propiedad: ${key}, valor: alien[${key}]')
+}
+
+const placesToGo =[{id:5, name:'Japón'}, {id:11, name:'Venecia'}, {id: 23, name:'Murcia'},{id:40, name:'Santander'} , {id: 44, name:'Filipinas'},{id: 59, name: 'Madagascar'}];
+for (const element of placesToGo){
+    for (let key in element){
+        console.log(key+ ': ' + element[key])
+    }
+}
+/**for (const element of placesToGo) {
+    if (element.id == 11 || element.id == 40){
+        let indexOfElement = placesToGo.indexOf(element);
+        placesToGo.splice(indexOfElement, 1);
+    }
+}Vamos a hacerlo ahora con un bucle for normal */
+
+for (let index = 0; index < placesToGo.length; index++) {
+    if (placesToGo[index].id == 11 || placesToGo[index].id == 40){
+        placesToGo.splice(index, 1);
+    }
+}
+
+for (const element of placesToGo){
+    for (let key in element){
+        console.log(key+ ': ' + element[key])
+    }
 }
