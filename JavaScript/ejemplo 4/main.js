@@ -26,3 +26,28 @@ console.log(dataFunction$$);
 
 const google$$ = document.querySelector('[href="https://www.google.es/"]');
 console.log(google$$);
+
+
+//ejercicio práctico
+
+let rayo = "El rayo es el mejor";
+rayo = rayo.toUpperCase();
+rayo = rayo.split("").join("-");
+console.log(rayo);
+
+//otro ejercicio: pirámide y pirámide invertida
+for (let i = 1; i <10; i++){
+    let row="";
+    for(let j = 0; j < i; j++){
+        row = row + i + " ";
+    }
+    console.log(row);
+}
+
+for (let i = 9; i>0; i--){
+    let row ="";
+    for (let j = 0; j < i; j++){
+        row = row + i + " ";
+    }
+    console.log(row);
+}
