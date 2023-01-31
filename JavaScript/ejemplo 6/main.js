@@ -31,8 +31,31 @@ function addItemAndTriggerCallback(item, list, callback) {
 addItemAndTriggerCallback("Mario", ["Alberto", "José"], callbackExample);
 
 //-------FUNCIÓN FETCH------
-fetch("https://pokeapi.co/api/v2/")
+fetch("https://pokeapi.co/api/v2/pokemon")
   .then((res) => res.json())
   .then(function (res) {
     console.log(res);
+
+    for (const pokemon of res.results) {
+      const p$$ = document.createElement("p");
+      p$$.textContent = pokemon.name;
+      document.body.appendChild(p$$);
+    }
+  });
+
+fetch("https://rickandmortyapi.com/api/character")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (res) {
+    console.log(res);
+
+    for (const character of res.results) {
+      const p$$ = document.createElement("p");
+      const img$$ = document.createElement("img");
+      p$$.textContent = character.name;
+      img$$.setAttribute("src", character.image);
+      document.body.appendChild(p$$);
+      document.body.appendChild(img$$);
+    }
   });
