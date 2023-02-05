@@ -50,3 +50,34 @@ const animalFunction = () => {
 const { animalName, type } = animalFunction;
 
 //------------------ SPREAD OPERATOR -------------------
+//Permite que una expresión sea expandida en situaciones donde se esperan múltiples argumentos.
+//los tres puntos quitan los corchetes
+
+let xmen = ["Ciclops", "Beast", "Angel", "Marvel-girl"];
+let newXmen = ["Wolverine", "NightCrawler", "Storm"];
+
+//Se puede usar para copiar los valores en un nuevo array
+let xmenCopy = [...xmen];
+
+//Antes se usaba el concat y ahora ...
+let myMutants = [...xmen, "pikachu", ...newXmen, "Bulbasaur"];
+
+//se usa para jugar con tu array sin modificarlo
+let [lastMutant] = [...xmen].reverse();
+let arraySpliced = [...myMutants].splice(0, 5);
+
+//no se ha modificado
+console.log(xmen);
+console.log(myMutants);
+console.log(lastMutant);
+console.log(arraySpliced);
+
+//con objetos
+const pokemon1 = { name: "Pikachu", gen: 1, type: "electric" };
+const pokemon2 = { name: "Charmander", gen: 1, type: "fire" };
+
+const copy1 = { ...pokemon1 }; //tiene los valores de pokemon1 en un nuevo objeto, aka una copia
+const copy2 = { ...pokemon1, ...pokemon2 }; //al tener las mismas propiedades, el segundo objeto machacará al primero
+
+const action = { action: "fly", time: "60 seconds" };
+const copy3 = { ...pokemon1, ...action }; //hará un mix de ambos objetos
