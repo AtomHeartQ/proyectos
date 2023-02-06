@@ -11,7 +11,7 @@ const { userName, role } = user;
 //En el destructuring las variables tienen que llamarse igual que las propiedades del objeto
 //evidentemene, duh
 
-console.log(name); //Abel
+console.log(userName); //Abel
 
 const returnAObj = () => {
   return { city: "Seul", country: "South Korea" };
@@ -25,7 +25,7 @@ const returnArray = () => {
   return ["Seul", "Corea del Sur"];
 };
 
-const [skyline, countripiti] = returnArray;
+const [skyline, countripiti] = returnArray();
 //podemos darles nombres distintos a las variables al ser un array.
 //la asignación de variables se hace por posición
 //más ejemplos prácticos:
@@ -81,3 +81,84 @@ const copy2 = { ...pokemon1, ...pokemon2 }; //al tener las mismas propiedades, e
 
 const action = { action: "fly", time: "60 seconds" };
 const copy3 = { ...pokemon1, ...action }; //hará un mix de ambos objetos
+
+//--------------------------------------- IMPORT/EXPORT ----------------------------------
+
+//*ver otros ejemplos en la carpeta*
+
+//--------------------------------------- LOOPS -------------------------------------------
+//-------- .map() -------------------------
+const revacholians = [
+  { id: 20, name: "Harrier DuBois" },
+  { id: 24, name: "Kim Kitsuragi" },
+  { id: 56, name: "Measurehead" },
+  { id: 88, name: "Klassje Amandou" },
+];
+
+const revacholiansId = revacholians.map((revacholian, index) => {
+  console.log(index);
+  return revacholian.id;
+});
+//.map() devuelve un array que podemos guardar en una variable
+
+console.log(revacholiansId); //[20,24,56,88]
+
+for (const revacholian of revacholians) {
+  console.log(revacholian);
+} //for solo lo recorre, no crea un nuevo array
+
+const users = [
+  { id: 1, name: "Abel" },
+  { id: 2, name: "Julia" },
+  { id: 3, name: "Pedro" },
+  { id: 1, name: "Amanda" },
+];
+
+const usersNameList = users.map((user) => {
+  if (user.name.startsWith("A")) {
+    return "Anacleto";
+  } else {
+    return user.name;
+  }
+});
+
+const newUsersNameList = users.map((user) =>
+  user.name[0] === "A" ? "Anacleto" : user.name
+);
+
+console.log(usersNameList);
+console.log(newUsersNameList);
+
+const cities = [
+  { isVisited: true, name: "Tokyo" },
+  { isVisited: false, name: "Madagascar" },
+  { isVisited: true, name: "Amsterdam" },
+  { isVisited: false, name: "Seul" },
+];
+
+const citiesList = cities.map((city) =>
+  city.isVisited === true ? city.name + " (Visitado)" : city.name
+);
+
+console.log(citiesList);
+
+//-------------------------------------- .filter() -----------------------------
+const animalsdAigo = [
+  { id: 1, name: "Albert", faction: "Rebels" },
+  { id: 2, name: "Mangel", faction: "Empire" },
+  { id: 3, name: "Toforu", faction: "Rebels" },
+  { id: 4, name: "Andreu", faction: "Empire" },
+];
+
+const empireAnimals = animalsdAigo.filter((animal) => {
+  return animal.faction === "Empire";
+});
+
+console.log(empireAnimals);
+
+//la diferencia con .map()
+const empireBooleanAnimals = animalsdAigo.map((animal) => {
+  return animal.faction === "Empire";
+});
+
+console.log(empireBooleanAnimals);
