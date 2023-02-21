@@ -9,6 +9,9 @@ import { CardComponent } from './card/card.component';
 import { InputButtonComponent } from './input-button/input-button.component';
 import { InputHelloWorldComponent } from './input-hello-world/input-hello-world.component';
 import { InputCardComponent } from './input-card/input-card.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
+import { OverAgeComponent } from './over-age/over-age.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { InputCardComponent } from './input-card/input-card.component';
     CardComponent,
     InputButtonComponent,
     InputHelloWorldComponent,
-    InputCardComponent
+    InputCardComponent,
+    NgIfComponent,
+    OverAgeComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,

@@ -21,5 +21,19 @@ export class AppComponent {
     pText: 'Soy otro parrafo de muestra y tampoco tengo nada mejor que decir',
     buttonText: 'Visitar'
   }
-  
+
+  person1 = {
+    name: 'Sara',
+    age: 19
+  }
+
+  person2 = {
+    name: 'Raquel',
+    age: 17
+  }
+
+  person3 = {
+    name: 'Marcos',
+    age: 21
+  }
 }
