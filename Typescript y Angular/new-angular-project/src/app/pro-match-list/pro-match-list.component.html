@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Partido</th>
+      <th>Resultado</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let match of matches; let index = index">
+      <td>{{ match.team1 }} vs {{ match.team2 }}</td>
+      <td>{{ match.score }}</td>
+      <td><button (click)="removeMatch(index)">X</button></td>
+    </tr>
+  </tbody>
+</table>

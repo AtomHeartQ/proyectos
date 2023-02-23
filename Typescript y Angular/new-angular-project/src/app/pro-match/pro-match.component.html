@@ -1,0 +1,10 @@
+<app-pro-match-filter
+  (filterEmitter)="filterMatch($event)"
+></app-pro-match-filter>
+
+<app-pro-match-list
+  [matches]="filteredMatches"
+  (removeMatchEmitter)="removeMatch($event)"
+></app-pro-match-list>
+
+<app-pro-match-form (addMatchEmitter)="addMatch($event)"></app-pro-match-form>
