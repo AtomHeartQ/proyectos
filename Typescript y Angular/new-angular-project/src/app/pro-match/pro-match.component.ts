@@ -30,6 +30,8 @@ export class ProMatchComponent implements OnInit {
 
   ];
 
+  filterText: string="";
+
   filteredMatches = this.matches;
   
   constructor(){
@@ -42,14 +44,16 @@ export class ProMatchComponent implements OnInit {
 
   removeMatch(index:any){
     this.matches.splice(index,1);
+    this.filterMatch(this.filterText);
   }
 
   addMatch(newMatch:any){
     this.matches.push(newMatch);
+    this.filterMatch(this.filterText);
   }
 
   filterMatch(textToFilter: any){
-    
+    this.filterText = textToFilter;
     this.filteredMatches = this.matches.filter(match => match.team1.toLowerCase().includes(textToFilter.toLowerCase()) || 
     match.team2.toLowerCase().includes(textToFilter.toLowerCase()))
   }
