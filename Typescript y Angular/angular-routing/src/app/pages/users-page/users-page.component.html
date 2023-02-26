@@ -1,3 +1,4 @@
+<app-heading>Users</app-heading>
 <ul>
   <li *ngFor="let user of userList">
     <a [routerLink]="'/users/' + user.id">{{ user.name }}</a>

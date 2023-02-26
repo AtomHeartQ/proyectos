@@ -1,7 +1,16 @@
 <ul>
-  <li><a [routerLink]="'/'">Home</a></li>
-  <li><a [routerLink]="'/users'">Users</a></li>
-  <li><a [routerLink]="'/contact'">Contact</a></li>
+  <li>
+    <a
+      [routerLink]="'/'"
+      routerLinkActive="active-route"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+  </li>
+  <li><a [routerLink]="'/users'" routerLinkActive="active-route">Users</a></li>
+  <li>
+    <a [routerLink]="'/contact'" routerLinkActive="active-route">Contact</a>
+  </li>
 </ul>
 <router-outlet></router-outlet>
 
