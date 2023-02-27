@@ -8,6 +8,9 @@ import { MenuComponent } from './core/components/menu/menu.component';
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './shared/components/gallery/gallery.component';
+import { PaginationComponent } from './shared/components/pagination/pagination.component';
+import { CharacterDetailPageComponent } from './pages/characters-page/pages/character-detail-page/character-detail-page.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     HomePageComponent,
     MenuComponent,
     CharactersPageComponent,
-    GalleryComponent
+    GalleryComponent,
+    PaginationComponent,
+    CharacterDetailPageComponent,
+    
   ],
   imports: [
     BrowserModule,

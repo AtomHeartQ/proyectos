@@ -1,1 +1,5 @@
 <app-gallery [list]="characters"></app-gallery>
+<app-pagination
+  [paginationInfo]="paginationInfo"
+  (newPageEmittter)="getCharacters($event)"
+></app-pagination>
