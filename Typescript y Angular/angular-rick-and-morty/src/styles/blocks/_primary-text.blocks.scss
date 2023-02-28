@@ -2,10 +2,10 @@
   font-size: 135px;
   color: var(--color-primary);
   text-align: center;
-  font-family: shlop rg;
+  font-family: var(--font-family-face);
   &--dark {
     //b-primary-text--dark
-    color: #000000;
+    color: var(--color-black);
   }
   &--small {
     font-size: 24px;
