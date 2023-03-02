@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FavoritesService } from '../../services/local/favorites.service';
 
 @Component({
   selector: 'app-gallery',
@@ -7,8 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit{
   @Input() list: any;
+  @Input() flagShowFavoriteButton: boolean = true;
+  
 
-  constructor(){
+  constructor(private favoritesService: FavoritesService){
 
   }
 
@@ -16,4 +19,13 @@ export class GalleryComponent implements OnInit{
     
   }
 
+  addOrRemoveToFavorites($event: any, newFavorite:any){
+    $event.stopPropagation(); //evita que el click en el botón se propague hacia arriba
+    if(this.flagShowFavoriteButton){
+      this.favoritesService.addFavorite(newFavorite);
+    }else{
+      this.favoritesService.removeFavorite(newFavorite);
+    }
+    
+  }
 }
