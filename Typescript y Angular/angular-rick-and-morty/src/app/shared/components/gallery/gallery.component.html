@@ -4,7 +4,7 @@
       <figure class="c-gallery__figure" routerLink="/characters/{{ item.id }}">
         <img
           class="c-gallery__image"
-          src="{{ item.image }}"
+          src="{{ item.image ? item.image : 'assets/img/planet.jpg' }}"
           alt="{{ item.name }}"
         />
         <figcaption class="c-gallery__text">{{ item.name }}</figcaption>

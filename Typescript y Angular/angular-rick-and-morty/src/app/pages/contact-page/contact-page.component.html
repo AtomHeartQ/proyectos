@@ -1,1 +1,32 @@
-<p>contact-page works!</p>
+<form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
+  <label for="name">Name</label>
+  <input type="text" id="name" formControlName="name" />
+  <p *ngIf="submitted && !contactForm.get('name').valid">
+    Name is required and needs to be 3 characters long min.
+  </p>
+
+  <label for="email">Email</label>
+  <input type="text" id="email" formControlName="email" />
+  <p *ngIf="submitted && !contactForm.get('email').valid">
+    Email is required and needs to be in email format.
+  </p>
+
+  <label for="phone">Phone</label>
+  <input type="text" id="phone" formControlName="phone" />
+  <p *ngIf="submitted && !contactForm.get('phone').valid">
+    Phone is required and needs to be exactly 9 characters long
+  </p>
+
+  <label for="description">Description</label>
+  <textarea
+    formControlName="description"
+    id="description"
+    cols="30"
+    rows="10"
+  ></textarea>
+  <p *ngIf="submitted && !contactForm.get('description').valid">
+    Description is required (5-255 characters)
+  </p>
+
+  <div><button>Enviar</button></div>
+</form>

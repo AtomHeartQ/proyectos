@@ -1,0 +1,5 @@
+<app-gallery [list]="locations"></app-gallery>
+<app-pagination
+  [paginationInfo]="paginationInfo"
+  (newPageEmittter)="getLocations($event)"
+></app-pagination>
