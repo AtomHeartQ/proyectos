@@ -15,6 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
 import { LocationsDetailPageComponent } from './pages/locations-page/pages/locations-detail-page/locations-detail-page.component';
+import { PriorityNamePipe } from './shared/pipes/priority-name.pipe';
+import { MultiplyPipe } from './shared/pipes/multiply.pipe';
 
 
 
@@ -31,6 +33,8 @@ import { LocationsDetailPageComponent } from './pages/locations-page/pages/locat
     LocationsPageComponent,
     FavoritesPageComponent,
     LocationsDetailPageComponent,
+    PriorityNamePipe,
+    MultiplyPipe,
     
   ],
   imports: [
