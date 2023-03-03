@@ -1,0 +1,9 @@
+<div *ngIf="location">
+  <h1>{{ location.name }}</h1>
+  <img
+    src="{{ location.image ? location.image : 'assets/img/planet.jpg' }}"
+    alt="{{ location.name }}"
+  />
+  <p>Type: {{ location.type }}</p>
+  <p>Dimension: {{ location.dimension }}</p>
+</div>

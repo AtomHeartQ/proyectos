@@ -14,6 +14,8 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { LocationsDetailPageComponent } from './pages/locations-page/pages/locations-detail-page/locations-detail-page.component';
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.co
     ContactPageComponent,
     LocationsPageComponent,
     FavoritesPageComponent,
+    LocationsDetailPageComponent,
     
   ],
   imports: [
