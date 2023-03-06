@@ -1,0 +1,1 @@
+export const levelEnum = {'Fresh': 'digivice-pink.png', 'In Training': 'digivice.png', 'Rookie': 'digivice-orange.png', 'Champion': 'digivice-green.png', 'Ultimate': 'digivice-grey.png', 'Mega': 'digivice-red.png', 'Armor': 'digivice-purple.png'}

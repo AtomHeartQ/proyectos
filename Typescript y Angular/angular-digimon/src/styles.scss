@@ -1,2 +1,4 @@
-@use "app/styles/imports/generic.imports.scss";
-@use "app/styles/imports/elements.imports.scss";
+@use "styles/imports/settings.imports";
+@use "styles/imports/generic.imports.scss";
+@use "styles/imports/elements.imports.scss";
+@use "styles/imports/blocks.imports.scss";

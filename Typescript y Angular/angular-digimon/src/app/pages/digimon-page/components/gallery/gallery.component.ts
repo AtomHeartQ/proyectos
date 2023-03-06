@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DigimonService } from 'src/app/shared/services/digimon.service';
 
 @Component({
@@ -8,8 +8,9 @@ import { DigimonService } from 'src/app/shared/services/digimon.service';
 })
 export class GalleryComponent implements OnInit{
   @Input() list: any;
+  @Output() fatherClickedXEmitter = new EventEmitter();
 
-  constructor (private digimonService: DigimonService){
+  constructor (){
 
   }
   

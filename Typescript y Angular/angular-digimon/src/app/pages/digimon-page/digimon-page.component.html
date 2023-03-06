@@ -1,1 +1,5 @@
-<app-gallery [list]="digimons"></app-gallery>
+<a class="b-btn" routerLink="/digimon/add">Add Digimon</a>
+<app-gallery
+  [list]="digimons"
+  (fatherClickedXEmitter)="removeDigimon($event)"
+></app-gallery>
