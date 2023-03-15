@@ -2,13 +2,12 @@
 
 class Vehiculo
 {
-    var $matricula;
-    var $combustible;
-    var $numRuedas;
-    var $numKilometro;
-    var $tipo;
-    var $marca;
-    var $modelo;
+    protected $combustible;
+    protected $numRuedas;
+    protected $numKilometro;
+    protected $tipo;
+    protected $marca;
+    protected $modelo;
 
     function __construct($tipo, $marca, $modelo)
     {
