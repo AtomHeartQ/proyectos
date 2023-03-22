@@ -1,0 +1,21 @@
+{% extends "../base.html.twig" %}
+{% block body %}
+	<h2>Estoy en la plantilla USER</h2>
+	<p>El nombre es
+		{{name}}
+		y la edad es
+		{{age}}</p>
+
+	<ul>
+		{% for mascota in mascotas %}
+			<li stle="{%if(loop.index%2==0)%} color: red; {%else%} color: blue;">{{loop.index0}}:{{mascota}}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
+{% block title %}Título de usuario
+{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block pie %}
+	<p>Este es el contenido del párrafo</p>
+{% endblock %}

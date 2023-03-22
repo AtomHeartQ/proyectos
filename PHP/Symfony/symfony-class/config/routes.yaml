@@ -1,0 +1,9 @@
+#index:
+#  path: /hola
+#  controller: App\Controller\DefaultController::saludar
+#contacto:
+#  path: /contact
+#  controller: App\Controller\DefaultController::showFormContact
+prueba:
+  path: /prueba
+  controller: App\Controller\AnotherController::showPrueba
