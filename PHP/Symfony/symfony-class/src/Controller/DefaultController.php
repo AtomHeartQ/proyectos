@@ -31,9 +31,9 @@ class DefaultController extends AbstractController
     /**
      * @Route("/hola/{persona}")
      */
-    public function saludar($persona, $mensaje)
+    public function saludar($persona)
     {
-        $mensaje = ucfirst($mensaje);
+        dump($persona);
         //return new Response("Hola, $persona, desde Symfony! $mensaje");
         //return $this->render('base.html.twig');
         return $this->render('saludo.html.twig', ['name' => $persona]);
